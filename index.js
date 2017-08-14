@@ -1,11 +1,13 @@
 $(function() {
+    myForm = new MyForm();
+
     $('#myForm input').change(function() {
         $(this).removeClass('error');
     })
 
     $('#myForm').submit(function(e){
         e.preventDefault();
-        new MyForm().submit();
+        myForm.submit();
     })
 })
 
